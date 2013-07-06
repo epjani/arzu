@@ -1,0 +1,912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700' rel='stylesheet' type='text/css'>
+        <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.10.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>        
+        <script src="js/jquery.fancybox.pack.js" type="text/javascript"></script>
+        <script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="page_container">
+            <a href="#" title="Arzu Studio Hope" class="arzu_logo"><img src="images/arzu-logo.png" alt="Arzu Studio Hope Logo" /></a>
+
+            <div class="header_divider">&nbsp;</div>
+            <div class="content_wrapper">
+                <h1 class="purchase_rug font-gotham">Purchase a Rug that Makes a Difference</h1>
+                <div class="dotted_line"></div>
+                <div class="left_part font-gotham">
+                    <p class="arzu_rugs">By purchasing a handmade ARZU STUDIO HOPE rug, you are helping highly-skilled Afghan woman weavers and their families break the cycle of poverty.</p>
+                    <p class="arzu_rugs">ARZU is an innovative model of social entrepreneurship that provides Afghan women with steady income, access to education and healthcare, and economic empowerment. The purchase of an ARZU rug is an investment in hope.</p>
+                    <p class="arzu_rugs font-red">Browse our collections and find the perfect rug for your space!</p>
+                    <div class="clear"></div>
+                    <div class="contact_frm_wrapper font-gotham">
+                        <div class="thank_for_interest"><span class="font-gotham-bold">Thank you for your interest!</span> Please provide your information below and an ARZU STUDIO HOPE sales representative will contact you.</div>
+                        <form class="contact" action="contact.php" method="post">
+                            
+                            <input name="name" type="text" />
+                            <label class="font-gotham-bold" for="name">Name*</label>
+                            
+                            <input name="email" type="text" />
+                            <label class="font-gotham-bold" for="email">Email Address*</label>
+                            
+                            <select name="hear_about">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <label class="font-gotham-bold" for="hear_about" style="margin-top:0px;">How did you hear about us?*</label>
+                            
+                            <input type="text" name="zip" class="inp_zip" />
+                            <label class="font-gotham-bold" for="zip">Zip</label>
+                            <div class="clear"></div>
+                            <textarea name="questions" rows="5" cols="10"></textarea>
+                            <label class="font-gotham-bold questions" for="questions">Questions / Comments</label>
+                            <div class="clear"></div>
+                            <input type="checkbox" name="subscribe" value="SUBSCRIBE" class="subscribe" /><span class="subscribe" >Subscribe to ASH emails & newsletters</span>
+                            
+                            <input type="submit" class="submit_inquiry font-gotham" value="SUBMIT INQUIRY" />
+                            <div class="clear"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="right_part font-gotham font-georgia">
+                    <h2 class="choose_collection font-gotham-bold font-red">Choose a collection to view designs</h2>
+                    <div class="selectable_collection">
+                        <a href="#fb_content" id="masters_link" onclick="switch_category('masters');"><img src="images/masters_collection_img.png" alt="Masters Collection" /></a>
+                        <span class="collection_description">The Masters Collection is a collaboration between iconic modern architects and rural Afghan weavers. This unique collection elegantly embodies the marriage of high design and traditional techniques.</span>
+                    </div>
+                    <div class="selectable_collection right">
+                        <a href="#fb_content" id="modern_link" onclick="switch_category('modern');"><img src="images/modern_contemporary_img.png" alt="Moder Contemporary" /></a>
+                        <span class="collection_description">The Modern + Contemporary Collection features work from top end designers, all exclusive to ARZU. The designs in this collection vary from bold, innovative motifs to subtle, watercolor-inspired patterns.</span>
+                    </div>
+                    <div class="selectable_collection">
+                        <a href="#fb_content" id="traditional_link" onclick="switch_category('traditional');"><img src="images/classic_traditional_img.png" alt="Classic Traditional" /></a>
+                        <span class="collection_description">The Classic Traditional Collection represents our artful weavers' interpretations of floral motifs, highlighting the classic patterns found in Afghanistan and all along the Silk Road. Both Persian and Oriental influences are found in this extensive, diverse and exquisite collection.</span>
+                    </div>
+                    <div class="selectable_collection right">
+                        <a href="#fb_content" id="tribal_link" onclick="switch_category('tribal');"><img src="images/tribal_heirloom_img.jpg" alt="Tribal Heirloom" /></a>
+                        <span class="collection_description">The Tribal Collection features designs that have been woven for centuries by tribes in the mountains of central Afghanistan. The fine, supple weave has the look and handle of old Caucasian or Turkmen rugs, predominantly showcasing bold, rich colors and geometric patterns.</span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="footer_wrapper">
+                    <img src="images/footer_logo.jpg" style="margin-right:10px;float:left;"/>
+                    <span style="float:left;font-size:12px;color:#999999;line-height:16px;margin-top:3px;">875 North Michigan Avenue, Suite 1440<br />Chicago, IL, 60611 | 773.231.9588</span>
+                    <span style="float:right;font-size:12px;color:#999999;line-height:16px;margin-top:3px;text-align:right;">Privacy . Terms & Conditions . FAQ<br />Copyright &copy; 2013 ARZU STUDIO HOPE | All rights reserved</span>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Fancy box -->
+        <div style="display:none;">
+        <div id="fb_content">
+            <div class="fb_header">
+                <ul class="fb_cat font-gotham">
+                    <li id="masters_cat" class="category"><a href="#" onclick="switch_category('masters');">Masters Collection</a></li>
+                    <li id="modern_cat" class="category"><a href="#" onclick="switch_category('modern');">Modern + Contemporary</a></li>
+                    <li id="tribal_cat" class="category" onclick="switch_category('tribal');"><a href="#">Tribal Heirloom</a></li>
+                    <li id="traditional_cat" class="category" onclick="switch_category('traditional');"><a href="#">Classic Traditional</a></li>
+                </ul>
+            </div>
+            <div class="fb_designs_container">
+                <div class="designs">
+                    <h2 class="designs_title font-gotham-bold font-red">Designs</h2>
+                    <!-- masters left menu -->
+                    <div class="masters togglable_cat">
+                        <ul id="masters_list" class="designs_list font-gotham">
+                            <li id="abrahamic_tribal"><a href="#" onclick="show_thumbs('abrahamic_tribal');"><img src="images/designs/images/tribal_patterning_s.jpeg" class="small_design" width="21" height="30" />Abrahamic Tribal Patterning I<br /><span class="designed_by">by Stanley Tigerman</span></a></li>
+                            <li id="abrahamic_tribal2"><a href="#" onclick="show_thumbs('abrahamic_tribal2');"><img src="images/designs/images/tribal_patterning2_s.jpeg" class="small_design" width="21" height="30" />Abrahamic Tribal Patterning II<br /><span class="designed_by">by Stanley Tigerman</span></a></li>
+                            <li id="arabesque1"><a href="#" onclick="show_thumbs('arabesque1');"><img src="images/designs/images/arabesque1_s.jpeg" class="small_design" width="21" height="30" />Arabesque 1<br /><span class="designed_by">by Michael Graves</span></a></li>
+                            <li id="arabesque2"><a href="#" onclick="show_thumbs('arabesque2');"><img src="images/designs/images/arabesque2_s.jpeg" class="small_design" width="21" height="30" />Arabesque 1<br /><span class="designed_by">by Michael Graves</span></a></li>
+                            <li id="puzzle"><a href="#" onclick="show_thumbs('puzzle');"><img src="images/designs/images/puzzle_s.jpeg" class="small_design" width="21" height="30" />Puzz<br /><span class="designed_by">by Frank Gehry</span></a></li>
+                            <li id="simeon"><a href="#" onclick="show_thumbs('simeon');"><img src="images/designs/images/simeon_s.jpeg" class="small_design" width="21" height="30" />Simeon I<br /><span class="designed_by">by Margaret McCurry</span></a></li>
+                            <li id="simeon2"><a href="#" onclick="show_thumbs('simeon2');"><img src="images/designs/images/simeon2_s.jpeg" class="small_design" width="21" height="30" />Simeon II<br /><span class="designed_by">by Margaret McCurry</span></a></li>
+                            <li id="volute"><a href="#" onclick="show_thumbs('volute');"><img src="images/designs/images/volute_s.jpeg" class="small_design" width="21" height="30" />Volute<br /><span class="designed_by">by Robert A.M Stern</span></a></li>
+                            <li id="zh1" class="last"><a href="#" onclick="show_thumbs('zh1');"><img src="images/designs/images/zh1_S.jpeg" class="small_design" width="21" height="30" />ZH<br /><span class="designed_by">by Zaha Hadid</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- masters left menu end -->
+                    <div class="modern togglable_cat">
+                        <ul id="modern_list" class="designs_list font-gotham">
+                            <li id="confidence1"><a href="#" onclick="show_thumbs('confidence1');"><img src="images/designs/images/confidence11_s.jpeg" class="small_design" width="21" height="30" />Confidence<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="confidence1"><a href="#" onclick="show_thumbs('confidence2');"><img src="images/designs/images/confidence21_s.jpeg" class="small_design" width="21" height="30" />Confidence II<br /><span class="designed_by">&nbsp;</span></a></li>                            
+                            <li id="contentment"><a href="#" onclick="show_thumbs('contentment');"><img src="images/designs/images/contentment_s.jpeg" class="small_design" width="21" height="30" />Contentment<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="dawn"><a href="#" onclick="show_thumbs('dawn');"><img src="images/designs/images/dawn1_s.jpeg" class="small_design" width="21" height="30" />Dawn<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="dreams"><a href="#" onclick="show_thumbs('dreams');"><img src="images/designs/images/dreams1_s.jpeg" class="small_design" width="21" height="30" />Dreams<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="elation"><a href="#" onclick="show_thumbs('elation');"><img src="images/designs/images/elation1_s.jpeg" class="small_design" width="21" height="30" />Elation<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="escape"><a href="#" onclick="show_thumbs('escape');"><img src="images/designs/images/escape_s.jpeg" class="small_design" width="21" height="30" />Escape<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="fortification"><a href="#" onclick="show_thumbs('fortification');"><img src="images/designs/images/fortification1_s.jpeg" class="small_design" width="21" height="30" />Fortification<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="future"><a href="#" onclick="show_thumbs('future');"><img src="images/designs/images/future_s.jpeg" class="small_design" width="21" height="30" />Future<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="glory"><a href="#" onclick="show_thumbs('glory');"><img src="images/designs/images/glory1_s.jpeg" class="small_design" width="21" height="30" />Glory<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="intervined"><a href="#" onclick="show_thumbs('intervined');"><img src="images/designs/images/intervined_s.jpeg" class="small_design" width="21" height="30" />Interwined<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="luck"><a href="#" onclick="show_thumbs('luck');"><img src="images/designs/images/luck_s.jpeg" class="small_design" width="21" height="30" />Luck<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="melody"><a href="#" onclick="show_thumbs('melody');"><img src="images/designs/images/melody_s.jpeg" class="small_design" width="21" height="30" />Melody II<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="merge"><a href="#" onclick="show_thumbs('merge');"><img src="images/designs/images/merge1_s.jpeg" class="small_design" width="21" height="30" />Merge<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="milestone"><a href="#" onclick="show_thumbs('milestone');"><img src="images/designs/images/milestone1_s.jpeg" class="small_design" width="21" height="30" />Milestone<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="paradise"><a href="#" onclick="show_thumbs('paradise');"><img src="images/designs/images/paradise1_s.jpeg" class="small_design" width="21" height="30" />Paradise<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="parallel"><a href="#" onclick="show_thumbs('parallel');"><img src="images/designs/images/parallel_s.jpeg" class="small_design" width="21" height="30" />Parallel<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="precious"><a href="#" onclick="show_thumbs('precious');"><img src="images/designs/images/precious1_s.jpeg" class="small_design" width="21" height="30" />Precious<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="preciousb"><a href="#" onclick="show_thumbs('preciousb');"><img src="images/designs/images/preciousb_s.jpeg" class="small_design" width="21" height="30" />Precious Border<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="radiance"><a href="#" onclick="show_thumbs('radiance');"><img src="images/designs/images/radiance1_s.jpeg" class="small_design" width="21" height="30" />Radiance<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="gabbeh"><a href="#" onclick="show_thumbs('gabbeh');"><img src="images/designs/images/gabbeh_s.jpeg" class="small_design" width="21" height="30" />Red Gabbeh<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="regenerate"><a href="#" onclick="show_thumbs('regenerate');"><img src="images/designs/images/regenerate1_s.jpeg" class="small_design" width="21" height="30" />Regenerate<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="reneval"><a href="#" onclick="show_thumbs('reneval');"><img src="images/designs/images/reneval1_s.jpeg" class="small_design" width="21" height="30" />Renewal<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="reneval2"><a href="#" onclick="show_thumbs('reneval2');"><img src="images/designs/images/reneval21_s.jpeg" class="small_design" width="21" height="30" />Renewal II<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="resourcefulness"><a href="#" onclick="show_thumbs('resourcefulness');"><img src="images/designs/images/resourcefulness11_s.jpeg" class="small_design" width="21" height="30" />Resourcefulness<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="resourcefulness2"><a href="#" onclick="show_thumbs('resourcefulness2');"><img src="images/designs/images/resourcefulness21_s.jpeg" class="small_design" width="21" height="30" />Resourcefulness II<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="simplicity"><a href="#" onclick="show_thumbs('simplicity');"><img src="images/designs/images/simplicity1_s.jpeg" class="small_design" width="21" height="30" />Simplicity<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="call"><a href="#" onclick="show_thumbs('call');"><img src="images/designs/images/call1_s.jpeg" class="small_design" width="21" height="30" />The Call<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="wave"><a href="#" onclick="show_thumbs('wave');"><img src="images/designs/images/wave_s.jpeg" class="small_design" width="21" height="30" />Wave<br /><span class="designed_by">&nbsp;</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="traditional togglable_cat">
+                        <ul id="traditional_list" class="designs_list font-gotham">
+                            <li id="ambition"><a href="#" onclick="show_thumbs('ambition');"><img src="images/designs/images/ambition_s.jpeg" class="small_design" width="21" height="30" />Ambition<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="blossom"><a href="#" onclick="show_thumbs('blossom');"><img src="images/designs/images/blossom1_s.jpeg" class="small_design" width="21" height="30" />Blossom<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="charity"><a href="#" onclick="show_thumbs('charity');"><img src="images/designs/images/charity1_s.jpeg" class="small_design" width="21" height="30" />Charity<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="compassion"><a href="#" onclick="show_thumbs('compassion');"><img src="images/designs/images/compassion_s.jpeg" class="small_design" width="21" height="30" />Compassion<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="convergence"><a href="#" onclick="show_thumbs('convergence');"><img src="images/designs/images/convergence_s.jpeg" class="small_design" width="21" height="30" />Convergence<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="creation"><a href="#" onclick="show_thumbs('creation');"><img src="images/designs/images/creation1_s.jpeg" class="small_design" width="21" height="30" />Creation<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="harmony"><a href="#" onclick="show_thumbs('harmony');"><img src="images/designs/images/harmony1_s.jpeg" class="small_design" width="21" height="30" />Harmony<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="kindness"><a href="#" onclick="show_thumbs('kindness');"><img src="images/designs/images/kindness_s.jpeg" class="small_design" width="21" height="30" />Kindness<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="loveliness"><a href="#" onclick="show_thumbs('loveliness');"><img src="images/designs/images/loveliness_s.jpeg" class="small_design" width="21" height="30" />Loveliness<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="offerings"><a href="#" onclick="show_thumbs('offerings');"><img src="images/designs/images/offerings_s.jpeg" class="small_design" width="21" height="30" />Offerings<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="prosperity"><a href="#" onclick="show_thumbs('prosperity');"><img src="images/designs/images/prosperity_s.jpeg" class="small_design" width="21" height="30" />Prosperity<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="embrace"><a href="#" onclick="show_thumbs('embrace');"><img src="images/designs/images/embrace_s.jpeg" class="small_design" width="21" height="30" />Embrace<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="purity"><a href="#" onclick="show_thumbs('purity');"><img src="images/designs/images/purity1_s.jpeg" class="small_design" width="21" height="30" />Purity<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="respect"><a href="#" onclick="show_thumbs('respect');"><img src="images/designs/images/respect_s.jpeg" class="small_design" width="21" height="30" />Respect<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="significance"><a href="#" onclick="show_thumbs('significance');"><img src="images/designs/images/significance_s.jpeg" class="small_design" width="21" height="30" />Significance<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="silence"><a href="#" onclick="show_thumbs('silence');"><img src="images/designs/images/silence1_s.jpeg" class="small_design" width="21" height="30" />Silence<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="trance"><a href="#" onclick="show_thumbs('trance');"><img src="images/designs/images/trance_s.jpeg" class="small_design" width="21" height="30" />Trance<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="treelife"><a href="#" onclick="show_thumbs('treelife');"><img src="images/designs/images/treelife_s.jpeg" class="small_design" width="21" height="30" />Tree Of Life<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="trust"><a href="#" onclick="show_thumbs('trust');"><img src="images/designs/images/trust_s.jpeg" class="small_design" width="21" height="30" />Trust<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="virtue"><a href="#" onclick="show_thumbs('virtue');"><img src="images/designs/images/virtue_s.jpeg" class="small_design" width="21" height="30" />Virtue<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="vision"><a href="#" onclick="show_thumbs('vision');"><img src="images/designs/images/vision_s.jpeg" class="small_design" width="21" height="30" />Vision<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="vitality"><a href="#" onclick="show_thumbs('vitality');"><img src="images/designs/images/vitality1_s.jpeg" class="small_design" width="21" height="30" />Vitality<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="wish"><a href="#" onclick="show_thumbs('wish');"><img src="images/designs/images/wish1_s.jpeg" class="small_design" width="21" height="30" />Wish<br /><span class="designed_by">&nbsp;</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="tribal togglable_cat">
+                        <ul id="tribal_list" class="designs_list font-gotham">
+                            <li id="balance"><a href="#" onclick="show_thumbs('balance');"><img src="images/designs/images/balance1_s.jpeg" class="small_design" width="21" height="30" />Balance<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="chains"><a href="#" onclick="show_thumbs('chains');"><img src="images/designs/images/chains1_s.jpeg" class="small_design" width="21" height="30" />Chains of Hope<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="connection"><a href="#" onclick="show_thumbs('connection');"><img src="images/designs/images/connection1_s.jpeg" class="small_design" width="21" height="30" />Connection<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="eternity"><a href="#" onclick="show_thumbs('eternity');"><img src="images/designs/images/eternity_s.jpeg" class="small_design" width="21" height="30" />Eternity<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="forgiveness"><a href="#" onclick="show_thumbs('forgiveness');"><img src="images/designs/images/forgiveness1_s.jpeg" class="small_design" width="21" height="30" />Forgiveness<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="hope"><a href="#" onclick="show_thumbs('hope');"><img src="images/designs/images/hope1_s.jpeg" class="small_design" width="21" height="30" />Hope<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="inspiration"><a href="#" onclick="show_thumbs('inspiration');"><img src="images/designs/images/inspiration1_s.jpeg" class="small_design" width="21" height="30" />Inspiration<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="knowledge"><a href="#" onclick="show_thumbs('knowledge');"><img src="images/designs/images/knowledge1_s.jpeg" class="small_design" width="21" height="30" />Knowledge<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="legacy"><a href="#" onclick="show_thumbs('legacy');"><img src="images/designs/images/legacy1_s.jpeg" class="small_design" width="21" height="30" />Legacy<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="majestic"><a href="#" onclick="show_thumbs('majestic');"><img src="images/designs/images/majestic1_s.jpeg" class="small_design" width="21" height="30" />Majestic<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="precision"><a href="#" onclick="show_thumbs('precision');"><img src="images/designs/images/precision_s.jpeg" class="small_design" width="21" height="30" />Precision<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="prevail"><a href="#" onclick="show_thumbs('prevail');"><img src="images/designs/images/prevail_s.jpeg" class="small_design" width="21" height="30" />Prevail<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="revelation"><a href="#" onclick="show_thumbs('revelation');"><img src="images/designs/images/revelation_s.jpeg" class="small_design" width="21" height="30" />Revelation<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="splendor"><a href="#" onclick="show_thumbs('splendor');"><img src="images/designs/images/splendor1_s.jpeg" class="small_design" width="21" height="30" />Splendor<br /><span class="designed_by">&nbsp;</span></a></li>
+                            <li id="talent"><a href="#" onclick="show_thumbs('talent');"><img src="images/designs/images/talent_s.jpeg" class="small_design" width="21" height="30" />Talent<br /><span class="designed_by">&nbsp;</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="images_container active_images">
+                    <div class="large_image">
+                        <!-- masters -->
+                        <img class="abrahamic_tribal large_image hide" src="images/designs/images/tribal_patterning_l.jpeg"  height="272" />
+                        <div class="abrahamic_tribal img_desc font-gotham hide"><span class="design_title">Abrahamic Tribal Patterning I</span><br />by Stanley Tigerman<br /><br />Show in: As pictured<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="abrahamic_tribal2 large_image hide" src="images/designs/images/tribal_patterning2_l.jpeg"  height="272" />
+                        <div class="abrahamic_tribal2 img_desc font-gotham hide"><span class="design_title">Abrahamic Tribal Patterning II</span><br />by Stanley Tigerman<br /><br />Show in: As pictured<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="arabesque1 large_image hide" src="images/designs/images/arabesque1_l.jpeg"  height="272" />
+                        <div class="arabesque1 img_desc font-gotham hide"><span class="design_title">Arabesque 1</span><br />by Michael Graves<br /><br />Show in: As pictured<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="arabesque2 large_image hide" src="images/designs/images/arabesque2_l.jpeg"  height="272" />
+                        <div class="arabesque2 img_desc font-gotham hide"><span class="design_title">Arabesque 2</span><br />by Michael Graves<br /><br />Show in: As pictured<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="puzzle large_image hide" src="images/designs/images/puzzle_l.jpeg"  height="272" />
+                        <div class="puzzle img_desc font-gotham hide"><span class="design_title">Puzz</span><br />by Frank Gehry<br /><br />Show in: As pictured<br /><br />Knots per square inch:  275<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="simeon large_image hide" src="images/designs/images/simeon_l.jpeg"  height="272" />
+                        <div class="simeon img_desc font-gotham hide"><span class="design_title">Simeon I</span><br />by Margaret McCurry<br /><br />Show in: As pictured<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="simeon2 large_image hide" src="images/designs/images/simeon2_l.jpeg"  height="272" />
+                        <div class="simeon2 img_desc font-gotham hide"><span class="design_title">Simeon II</span><br />by Margaret McCurry<br /><br />Show in: As pictured<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="volute large_image hide" src="images/designs/images/volute_l.jpeg"  height="272" />
+                        <div class="volute img_desc font-gotham hide"><span class="design_title">Volute</span><br />by Robert A.M Stern<br /><br />Show in: As pictured<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="zh1 large_image hide" src="images/designs/images/zh1_l.jpeg"  height="272" />
+                        <div class="zh1 img_desc font-gotham hide"><span class="design_title">ZH</span><br />by Zaha Hadid<br /><br />Show in: Pink<br /><br />Knots per square inch:  275<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="zh2 large_image hide" src="images/designs/images/zh2_l.jpeg"  height="272" />
+                        <div class="zh2 img_desc font-gotham hide"><span class="design_title">ZH</span><br />by Zaha Hadid<br /><br />Show in: Black<br /><br />Knots per square inch:  275<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <!-- masters end -->
+                        <!-- modern -->
+                        <img class="confidence11 large_image hide" src="images/designs/images/confidence11_l.jpeg"  height="272" />
+                        <div class="confidence11 img_desc font-gotham hide"><span class="design_title">Confidence</span><br /><br /><br />Show in: Aqua<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence12 large_image hide" src="images/designs/images/confidence12_l.jpeg"  height="272" />
+                        <div class="confidence12 img_desc font-gotham hide"><span class="design_title">Confidence</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch:  7WL10<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence13 large_image hide" src="images/designs/images/confidence13_l.jpeg"  height="272" />
+                        <div class="confidence13 img_desc font-gotham hide"><span class="design_title">Confidence</span><br /><br /><br />Show in: White<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence14 large_image hide" src="images/designs/images/confidence14_l.jpeg"  height="272" />
+                        <div class="confidence14 img_desc font-gotham hide"><span class="design_title">Confidence</span><br /><br /><br />Show in: Cocoa<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence15 large_image hide" src="images/designs/images/confidence15_l.jpeg"  height="272" />
+                        <div class="confidence15 img_desc font-gotham hide"><span class="design_title">Confidence</span><br /><br /><br />Show in: Lime<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="confidence21 large_image hide" src="images/designs/images/confidence21_l.jpeg"  height="272" />
+                        <div class="confidence21 img_desc font-gotham hide"><span class="design_title">Confidence II</span><br /><br /><br />Show in: Light Purple<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence22 large_image hide" src="images/designs/images/confidence22_l.jpeg"  height="272" />
+                        <div class="confidence22 img_desc font-gotham hide"><span class="design_title">Confidence II</span><br /><br /><br />Show in: Water<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence23 large_image hide" src="images/designs/images/confidence23_l.jpeg"  height="272" />
+                        <div class="confidence23 img_desc font-gotham hide"><span class="design_title">Confidence II</span><br /><br /><br />Show in: Ventian Red<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence24 large_image hide" src="images/designs/images/confidence24_l.jpeg"  height="272" />
+                        <div class="confidence24 img_desc font-gotham hide"><span class="design_title">Confidence II</span><br /><br /><br />Show in: Steel<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence25 large_image hide" src="images/designs/images/confidence25_l.jpeg"  height="272" />
+                        <div class="confidence25 img_desc font-gotham hide"><span class="design_title">Confidence II</span><br /><br /><br />Show in: Cream<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="confidence26 large_image hide" src="images/designs/images/confidence26_l.jpeg"  height="272" />
+                        <div class="confidence26 img_desc font-gotham hide"><span class="design_title">Confidence II</span><br /><br /><br />Show in: Chocolate<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="contentment large_image hide" src="images/designs/images/contentment_l.jpeg"  height="272" />
+                        <div class="contentment img_desc font-gotham hide"><span class="design_title">Contentment</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="dawn1 large_image hide" src="images/designs/images/dawn1_l.jpeg"  height="272" />
+                        <div class="dawn1 img_desc font-gotham hide"><span class="design_title">Dawn</span><br /><br /><br />Show in: Stone<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="dawn2 large_image hide" src="images/designs/images/dawn2_l.jpeg"  height="272" />
+                        <div class="dawn2 img_desc font-gotham hide"><span class="design_title">Dawn</span><br /><br /><br />Show in: Cocoa<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="dawn3 large_image hide" src="images/designs/images/dawn3_l.jpeg"  height="272" />
+                        <div class="dawn3 img_desc font-gotham hide"><span class="design_title">Dawn</span><br /><br /><br />Show in: Celadon<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="dreams1 large_image hide" src="images/designs/images/dreams1_l.jpeg"  height="272" />
+                        <div class="dreams1 img_desc font-gotham hide"><span class="design_title">Dreams</span><br /><br /><br />Show in: Fuschia<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="dreams2 large_image hide" src="images/designs/images/dreams2_l.jpeg"  height="272" />
+                        <div class="dreams2 img_desc font-gotham hide"><span class="design_title">Dreams</span><br /><br /><br />Show in: Indigo<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="dreams3 large_image hide" src="images/designs/images/dreams3_l.jpeg"  height="272" />
+                        <div class="dreams3 img_desc font-gotham hide"><span class="design_title">Dreams</span><br /><br /><br />Show in: Chocolate<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="dreams4 large_image hide" src="images/designs/images/dreams4_l.jpeg"  height="272" />
+                        <div class="dreams4 img_desc font-gotham hide"><span class="design_title">Dreams</span><br /><br /><br />Show in: Brown<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="elation1 large_image hide" src="images/designs/images/elation1_l.jpeg"  height="272" />
+                        <div class="elation1 img_desc font-gotham hide"><span class="design_title">Elation</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="elation2 large_image hide" src="images/designs/images/elation2_l.jpeg"  height="272" />
+                        <div class="elation2 img_desc font-gotham hide"><span class="design_title">Elation</span><br /><br /><br />Show in: Aqua<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="elation3 large_image hide" src="images/designs/images/elation3_l.jpeg"  height="272" />
+                        <div class="elation3 img_desc font-gotham hide"><span class="design_title">Elation</span><br /><br /><br />Show in: Cocoa<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="elation4 large_image hide" src="images/designs/images/elation4_l.jpeg"  height="272" />
+                        <div class="elation4 img_desc font-gotham hide"><span class="design_title">Elation</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="escape large_image hide" src="images/designs/images/escape_l.jpeg"  height="272" />
+                        <div class="escape img_desc font-gotham hide"><span class="design_title">Escape</span><br /><br /><br />Show in: Natural Wool<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="fortification1 large_image hide" src="images/designs/images/fortification1_l.jpeg"  height="272" />
+                        <div class="fortification1 img_desc font-gotham hide"><span class="design_title">Fortification</span><br /><br /><br />Show in: Brown<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="fortification2 large_image hide" src="images/designs/images/fortification2_l.jpeg"  height="272" />
+                        <div class="fortification2 img_desc font-gotham hide"><span class="design_title">Fortification</span><br /><br /><br />Show in: Orange<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="fortification3 large_image hide" src="images/designs/images/fortification3_l.jpeg"  height="272" />
+                        <div class="fortification3 img_desc font-gotham hide"><span class="design_title">Fortification</span><br /><br /><br />Show in: Blue-Green<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="future large_image hide" src="images/designs/images/future_l.jpeg"  height="272" />
+                        <div class="future img_desc font-gotham hide"><span class="design_title">Future</span><br /><br /><br />Show in: Natural Wool<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="glory1 large_image hide" src="images/designs/images/glory1_l.jpeg"  height="272" />
+                        <div class="glory1 img_desc font-gotham hide"><span class="design_title">Glory</span><br /><br /><br />Show in: Stone<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="glory2 large_image hide" src="images/designs/images/glory2_l.jpeg"  height="272" />
+                        <div class="glory2 img_desc font-gotham hide"><span class="design_title">Glory</span><br /><br /><br />Show in: Cocoa<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="intervined large_image hide" src="images/designs/images/intervined_l.jpeg"  height="272" />
+                        <div class="intervined img_desc font-gotham hide"><span class="design_title">Interwined</span><br /><br /><br />Show in: Midnight<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="luck large_image hide" src="images/designs/images/luck_l.jpeg"  height="272" />
+                        <div class="luck img_desc font-gotham hide"><span class="design_title">Luck</span><br /><br /><br />Show in: Natural Wool<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="melody large_image hide" src="images/designs/images/melody_l.jpeg"  height="272" />
+                        <div class="melody img_desc font-gotham hide"><span class="design_title">Melody II</span><br /><br /><br />Show in: Aqua<br /><br />Knots per square inch:  150<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="merge1 large_image hide" src="images/designs/images/merge1_l.jpeg"  height="272" />
+                        <div class="merge1 img_desc font-gotham hide"><span class="design_title">Merge</span><br /><br /><br />Show in: Sand<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="merge2 large_image hide" src="images/designs/images/merge2_l.jpeg"  height="272" />
+                        <div class="merge2 img_desc font-gotham hide"><span class="design_title">Merge</span><br /><br /><br />Show in: Chocolate<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="merge3 large_image hide" src="images/designs/images/merge3_l.jpeg"  height="272" />
+                        <div class="merge3 img_desc font-gotham hide"><span class="design_title">Merge</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="milestone1 large_image hide" src="images/designs/images/milestone1_l.jpeg"  height="272" />
+                        <div class="milestone1 img_desc font-gotham hide"><span class="design_title">Milestone</span><br /><br /><br />Show in: Chocolate<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="milestone2 large_image hide" src="images/designs/images/milestone2_l.jpeg"  height="272" />
+                        <div class="milestone2 img_desc font-gotham hide"><span class="design_title">Milestone</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="milestone3 large_image hide" src="images/designs/images/milestone3_l.jpeg"  height="272" />
+                        <div class="milestone3 img_desc font-gotham hide"><span class="design_title">Milestone</span><br /><br /><br />Show in: Orange<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="milestone4 large_image hide" src="images/designs/images/milestone4_l.jpeg"  height="272" />
+                        <div class="milestone4 img_desc font-gotham hide"><span class="design_title">Milestone</span><br /><br /><br />Show in: Marine Blue<br /><br />Knots per square inch:  120<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="paradise1 large_image hide" src="images/designs/images/paradise1_l.jpeg"  height="272" />
+                        <div class="paradise1 img_desc font-gotham hide"><span class="design_title">Paradise</span><br /><br /><br />Show in: Marine Blue<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="paradise2 large_image hide" src="images/designs/images/paradise2_l.jpeg"  height="272" />
+                        <div class="paradise2 img_desc font-gotham hide"><span class="design_title">Paradise</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="paradise3 large_image hide" src="images/designs/images/paradise3_l.jpeg"  height="272" />
+                        <div class="paradise3 img_desc font-gotham hide"><span class="design_title">Paradise</span><br /><br /><br />Show in: Olive<br /><br />Knots per square inch:  100<br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="parallel large_image hide" src="images/designs/images/parallel_l.jpeg"  height="272" />
+                        <div class="parallel img_desc font-gotham hide"><span class="design_title">Parallel</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch:  <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="precious1 large_image hide" src="images/designs/images/precious1_l.jpeg"  height="272" />
+                        <div class="precious1 img_desc font-gotham hide"><span class="design_title">Precious</span><br /><br /><br />Show in: Pewter<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="precious2 large_image hide" src="images/designs/images/precious2_l.jpeg"  height="272" />
+                        <div class="precious2 img_desc font-gotham hide"><span class="design_title">Precious</span><br /><br /><br />Show in: Gold<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="precious3 large_image hide" src="images/designs/images/precious3_l.jpeg"  height="272" />
+                        <div class="precious3 img_desc font-gotham hide"><span class="design_title">Precious</span><br /><br /><br />Show in: Cocoa<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="preciousb large_image hide" src="images/designs/images/preciousb_l.jpeg"  height="272" />
+                        <div class="preciousb img_desc font-gotham hide"><span class="design_title">Precious Border</span><br /><br /><br />Show in: Teal<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="radiance1 large_image hide" src="images/designs/images/radiance1_l.jpeg"  height="272" />
+                        <div class="radiance1 img_desc font-gotham hide"><span class="design_title">Radiance</span><br /><br /><br />Show in: Celedon<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="radiance2 large_image hide" src="images/designs/images/radiance2_l.jpeg"  height="272" />
+                        <div class="radiance2 img_desc font-gotham hide"><span class="design_title">Radiance</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="gabbeh large_image hide" src="images/designs/images/gabbeh_l.jpeg"  height="272" />
+                        <div class="gabbeh img_desc font-gotham hide"><span class="design_title">Red Gabbeh</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="regenerate1 large_image hide" src="images/designs/images/regenerate1_l.jpeg"  height="272" />
+                        <div class="regenerate1 img_desc font-gotham hide"><span class="design_title">Regenerate</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="regenerate2 large_image hide" src="images/designs/images/regenerate2_l.jpeg"  height="272" />
+                        <div class="regenerate2 img_desc font-gotham hide"><span class="design_title">Regenerate</span><br /><br /><br />Show in: Beige<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="reneval1 large_image hide" src="images/designs/images/reneval1_l.jpeg"  height="272" />
+                        <div class="reneval1 img_desc font-gotham hide"><span class="design_title">Renewal</span><br /><br /><br />Show in: Pewter<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="reneval2 large_image hide" src="images/designs/images/reneval2_l.jpeg"  height="272" />
+                        <div class="reneval2 img_desc font-gotham hide"><span class="design_title">Renewal</span><br /><br /><br />Show in: Beige<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="reneval3 large_image hide" src="images/designs/images/reneval3_l.jpeg"  height="272" />
+                        <div class="reneval3 img_desc font-gotham hide"><span class="design_title">Renewal</span><br /><br /><br />Show in: Cocoa<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="reneval4 large_image hide" src="images/designs/images/reneval3_l.jpeg"  height="272" />
+                        <div class="reneval4 img_desc font-gotham hide"><span class="design_title">Renewal</span><br /><br /><br />Show in: Brown<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="reneval21 large_image hide" src="images/designs/images/reneval21_l.jpeg"  height="272" />
+                        <div class="reneval21 img_desc font-gotham hide"><span class="design_title">Renewal II</span><br /><br /><br />Show in: Cream<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="reneval22 large_image hide" src="images/designs/images/reneval22_l.jpeg"  height="272" />
+                        <div class="reneval22 img_desc font-gotham hide"><span class="design_title">Renewal II</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="resourcefulness11 large_image hide" src="images/designs/images/resourcefulness11_l.jpeg"  height="272" />
+                        <div class="resourcefulness11 img_desc font-gotham hide"><span class="design_title">Resourcefulness</span><br /><br /><br />Show in: Beige<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="resourcefulness12 large_image hide" src="images/designs/images/resourcefulness12_l.jpeg"  height="272" />
+                        <div class="resourcefulness12 img_desc font-gotham hide"><span class="design_title">Resourcefulness</span><br /><br /><br />Show in: Stone<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="resourcefulness13 large_image hide" src="images/designs/images/resourcefulness13_l.jpeg"  height="272" />
+                        <div class="resourcefulness13 img_desc font-gotham hide"><span class="design_title">Resourcefulness</span><br /><br /><br />Show in: Lime<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="resourcefulness14 large_image hide" src="images/designs/images/resourcefulness14_l.jpeg"  height="272" />
+                        <div class="resourcefulness14 img_desc font-gotham hide"><span class="design_title">Resourcefulness</span><br /><br /><br />Show in: Amethyst<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="resourcefulness15 large_image hide" src="images/designs/images/resourcefulness15_l.jpeg"  height="272" />
+                        <div class="resourcefulness15 img_desc font-gotham hide"><span class="design_title">Resourcefulness</span><br /><br /><br />Show in: Indigo<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="resourcefulness16 large_image hide" src="images/designs/images/resourcefulness16_l.jpeg"  height="272" />
+                        <div class="resourcefulness16 img_desc font-gotham hide"><span class="design_title">Resourcefulness</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? <br />Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="resourcefulness21 large_image hide" src="images/designs/images/resourcefulness21_l.jpeg"  height="272" />
+                        <div class="resourcefulness21 img_desc font-gotham hide"><span class="design_title">Resourcefulness II</span><br /><br /><br />Show in: Amethyst and Violet<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="resourcefulness22 large_image hide" src="images/designs/images/resourcefulness22_l.jpeg"  height="272" />
+                        <div class="resourcefulness22 img_desc font-gotham hide"><span class="design_title">Resourcefulness II</span><br /><br /><br />Show in: Lime and Fir Green<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="resourcefulness23 large_image hide" src="images/designs/images/resourcefulness23_l.jpeg"  height="272" />
+                        <div class="resourcefulness23 img_desc font-gotham hide"><span class="design_title">Resourcefulness II</span><br /><br /><br />Show in: Red and Cranberry<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="resourcefulness24 large_image hide" src="images/designs/images/resourcefulness24_l.jpeg"  height="272" />
+                        <div class="resourcefulness24 img_desc font-gotham hide"><span class="design_title">Resourcefulness II</span><br /><br /><br />Show in: Sand and Camel<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="simplicity1 large_image hide" src="images/designs/images/simplicity1_l.jpeg"  height="272" />
+                        <div class="simplicity1 img_desc font-gotham hide"><span class="design_title">Simplicity</span><br /><br /><br />Show in: Multi Stripe<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="simplicity1 large_image hide" src="images/designs/images/simplicity2_l.jpeg"  height="272" />
+                        <div class="simplicity1 img_desc font-gotham hide"><span class="design_title">Simplicity</span><br /><br /><br />Show in: Sand<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="simplicity1 large_image hide" src="images/designs/images/simplicity3_l.jpeg"  height="272" />
+                        <div class="simplicity1 img_desc font-gotham hide"><span class="design_title">Simplicity</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="simplicity1 large_image hide" src="images/designs/images/simplicity4_l.jpeg"  height="272" />
+                        <div class="simplicity1 img_desc font-gotham hide"><span class="design_title">Simplicity</span><br /><br /><br />Show in: Natural Wool<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="call1 large_image hide" src="images/designs/images/call1_l.jpeg"  height="272" />
+                        <div class="call1 img_desc font-gotham hide"><span class="design_title">The Call</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="call2 large_image hide" src="images/designs/images/call2_l.jpeg"  height="272" />
+                        <div class="call2 img_desc font-gotham hide"><span class="design_title">The Call</span><br /><br /><br />Show in: Steel<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="call2 large_image hide" src="images/designs/images/call2_l.jpeg"  height="272" />
+                        <div class="call2 img_desc font-gotham hide"><span class="design_title">Wave</span><br /><br /><br />Show in: Chocolate<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <!-- modern -->
+                        <!-- traditional -->
+                        <img class="ambition large_image hide" src="images/designs/images/ambition_l.jpeg"  height="272" />
+                        <div class="ambition img_desc font-gotham hide"><span class="design_title">Ambition</span><br /><br /><br />Show in: Venitian Red<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>    
+                        
+                        <img class="blossom1 large_image hide" src="images/designs/images/blossom1_l.jpeg"  height="272" />
+                        <div class="blossom1 img_desc font-gotham hide"><span class="design_title">Blossom</span><br /><br /><br />Show in: Venitian Red<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="blossom2 large_image hide" src="images/designs/images/blossom2_l.jpeg"  height="272" />
+                        <div class="blossom2 img_desc font-gotham hide"><span class="design_title">Blossom</span><br /><br /><br />Show in: Sand<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>    
+                        <img class="blossom3 large_image hide" src="images/designs/images/blossom3_l.jpeg"  height="272" />
+                        <div class="blossom3 img_desc font-gotham hide"><span class="design_title">Blossom</span><br /><br /><br />Show in: Cream and Marine Blue<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="blossom4 large_image hide" src="images/designs/images/blossom4_l.jpeg"  height="272" />
+                        <div class="blossom4 img_desc font-gotham hide"><span class="design_title">Blossom</span><br /><br /><br />Show in: Cream<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        
+                        <img class="charity1 large_image hide" src="images/designs/images/charity1_l.jpeg"  height="272" />
+                        <div class="charity1 img_desc font-gotham hide"><span class="design_title">Charity</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>                        
+                        <img class="charity2 large_image hide" src="images/designs/images/charity2_l.jpeg"  height="272" />
+                        <div class="charity2 img_desc font-gotham hide"><span class="design_title">Charity</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="compassion large_image hide" src="images/designs/images/compassion_l.jpeg"  height="272" />
+                        <div class="compassion img_desc font-gotham hide"><span class="design_title">Compassion</span><br /><br /><br />Show in: Teal<br /><br />Knots per square inch: 140 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="convergence large_image hide" src="images/designs/images/convergence_l.jpeg"  height="272" />
+                        <div class="convergence img_desc font-gotham hide"><span class="design_title">Convergence</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="creation1 large_image hide" src="images/designs/images/creation1_l.jpeg"  height="272" />
+                        <div class="creation1 img_desc font-gotham hide"><span class="design_title">Creation</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="creation2 large_image hide" src="images/designs/images/creation2_l.jpeg"  height="272" />
+                        <div class="creation2 img_desc font-gotham hide"><span class="design_title">Creation</span><br /><br /><br />Show in: Venitian Red<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="harmony1 large_image hide" src="images/designs/images/harmony1_l.jpeg"  height="272" />
+                        <div class="harmony1 img_desc font-gotham hide"><span class="design_title">Harmony</span><br /><br /><br />Show in: Sand<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="harmony2 large_image hide" src="images/designs/images/harmony2_l.jpeg"  height="272" />
+                        <div class="harmony2 img_desc font-gotham hide"><span class="design_title">Harmony</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="kindness large_image hide" src="images/designs/images/kindness_l.jpeg"  height="272" />
+                        <div class="kindness img_desc font-gotham hide"><span class="design_title">Kindness</span><br /><br /><br />Show in: Venetian Red<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="loveliness large_image hide" src="images/designs/images/loveliness_l.jpeg"  height="272" />
+                        <div class="loveliness img_desc font-gotham hide"><span class="design_title">Loveliness</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="offerings large_image hide" src="images/designs/images/offerings_l.jpeg"  height="272" />
+                        <div class="offerings img_desc font-gotham hide"><span class="design_title">Offerings</span><br /><br /><br />Show in: Beige<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="offerings2 large_image hide" src="images/designs/images/offerings2_l.jpeg"  height="272" />
+                        <div class="offerings2 img_desc font-gotham hide"><span class="design_title">Offerings</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="prosperity large_image hide" src="images/designs/images/prosperity_l.jpeg"  height="272" />
+                        <div class="prosperity img_desc font-gotham hide"><span class="design_title">Prosperity</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        
+                        <img class="embrace large_image hide" src="images/designs/images/embrace_l.jpeg"  height="272" />
+                        <div class="embrace img_desc font-gotham hide"><span class="design_title">Embrace</span><br /><br /><br />Show in: Black<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="purity1 large_image hide" src="images/designs/images/purity1_l.jpeg"  height="272" />
+                        <div class="purity1 img_desc font-gotham hide"><span class="design_title">Purity</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="purity2 large_image hide" src="images/designs/images/purity2_l.jpeg"  height="272" />
+                        <div class="purity2 img_desc font-gotham hide"><span class="design_title">Purity</span><br /><br /><br />Show in: Cream<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="respect large_image hide" src="images/designs/images/respect_l.jpeg"  height="272" />
+                        <div class="respect img_desc font-gotham hide"><span class="design_title">Respect</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="significance large_image hide" src="images/designs/images/significance_l.jpeg"  height="272" />
+                        <div class="significance img_desc font-gotham hide"><span class="design_title">Significance</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="silence1 large_image hide" src="images/designs/images/silence1_l.jpeg"  height="272" />
+                        <div class="silence1 img_desc font-gotham hide"><span class="design_title">Silence</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="silence2 large_image hide" src="images/designs/images/silence2_l.jpeg"  height="272" />
+                        <div class="silence2 img_desc font-gotham hide"><span class="design_title">Silence</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="trance large_image hide" src="images/designs/images/trance_l.jpeg"  height="272" />
+                        <div class="trance img_desc font-gotham hide"><span class="design_title">Trance</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 140 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="treelife large_image hide" src="images/designs/images/treelife_l.jpeg"  height="272" />
+                        <div class="treelife img_desc font-gotham hide"><span class="design_title">Tree Of Life</span><br /><br /><br />Show in: Olive<br /><br />Knots per square inch: 140 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="trust large_image hide" src="images/designs/images/trust_l.jpeg"  height="272" />
+                        <div class="trust img_desc font-gotham hide"><span class="design_title">Trust</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="virtue large_image hide" src="images/designs/images/virtue_l.jpeg"  height="272" />
+                        <div class="virtue img_desc font-gotham hide"><span class="design_title">Virtue</span><br /><br /><br />Show in: Venitian Red<br /><br />Knots per square inch: 275 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="vision large_image hide" src="images/designs/images/vision_l.jpeg"  height="272" />
+                        <div class="vision img_desc font-gotham hide"><span class="design_title">Vision</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 100 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="vitality1 large_image hide" src="images/designs/images/vitality1_l.jpeg"  height="272" />
+                        <div class="vitality1 img_desc font-gotham hide"><span class="design_title">Vitality</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 160 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="vitality2 large_image hide" src="images/designs/images/vitality2_l.jpeg"  height="272" />
+                        <div class="vitality2 img_desc font-gotham hide"><span class="design_title">Vitality</span><br /><br /><br />Show in: Cream<br /><br />Knots per square inch: 160 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="vitality3 large_image hide" src="images/designs/images/vitality3_l.jpeg"  height="272" />
+                        <div class="vitality3 img_desc font-gotham hide"><span class="design_title">Vitality</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 160 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="wish1 large_image hide" src="images/designs/images/wish1_l.jpeg"  height="272" />
+                        <div class="wish1 img_desc font-gotham hide"><span class="design_title">Wish</span><br /><br /><br />Show in: Chocolate<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="wish2 large_image hide" src="images/designs/images/wish2_l.jpeg"  height="272" />
+                        <div class="wish2 img_desc font-gotham hide"><span class="design_title">Wish</span><br /><br /><br />Show in: Indigo<br /><br />Knots per square inch: 150 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <!-- traditional end -->
+
+                        <!-- tribal -->
+                        <img class="balance1 large_image hide" src="images/designs/images/balance1_l.jpeg"  height="272" />
+                        <div class="balance1 img_desc font-gotham hide"><span class="design_title">Balance</span><br /><br /><br />Show in: Celedon<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="balance2 large_image hide" src="images/designs/images/balance2_l.jpeg"  height="272" />
+                        <div class="balance2 img_desc font-gotham hide"><span class="design_title">Balance</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="balance3 large_image hide" src="images/designs/images/balance3_l.jpeg"  height="272" />
+                        <div class="balance3 img_desc font-gotham hide"><span class="design_title">Balance</span><br /><br /><br />Show in: Venitian Red<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="balance4 large_image hide" src="images/designs/images/balance4_l.jpeg"  height="272" />
+                        <div class="balance4 img_desc font-gotham hide"><span class="design_title">Balance</span><br /><br /><br />Show in: Olive<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="balance5 large_image hide" src="images/designs/images/balance5_l.jpeg"  height="272" />
+                        <div class="balance5 img_desc font-gotham hide"><span class="design_title">Balance</span><br /><br /><br />Show in: Robin Blue<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="chains1 large_image hide" src="images/designs/images/chains1_l.jpeg"  height="272" />
+                        <div class="chains1 img_desc font-gotham hide"><span class="design_title">Chains Of Hope</span><br /><br /><br />Show in: Red and Cream<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="chains2 large_image hide" src="images/designs/images/chains2_l.jpeg"  height="272" />
+                        <div class="chains2 img_desc font-gotham hide"><span class="design_title">Chains Of Hope</span><br /><br /><br />Show in: Venitian Red<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="chains3 large_image hide" src="images/designs/images/chains3_l.jpeg"  height="272" />
+                        <div class="chains3 img_desc font-gotham hide"><span class="design_title">Chains Of Hope</span><br /><br /><br />Show in: Black<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="chains4 large_image hide" src="images/designs/images/chains4_l.jpeg"  height="272" />
+                        <div class="chains4 img_desc font-gotham hide"><span class="design_title">Chains Of Hope</span><br /><br /><br />Show in: Red and Teal<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="connection1 large_image hide" src="images/designs/images/connection1_l.jpeg"  height="272" />
+                        <div class="connection1 img_desc font-gotham hide"><span class="design_title">Connection</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="connection2 large_image hide" src="images/designs/images/connection2_l.jpeg"  height="272" />
+                        <div class="connection2 img_desc font-gotham hide"><span class="design_title">Connection</span><br /><br /><br />Show in: Cream<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="eternity large_image hide" src="images/designs/images/eternity_l.jpeg"  height="272" />
+                        <div class="eternity img_desc font-gotham hide"><span class="design_title">Eternity</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="forgiveness1 large_image hide" src="images/designs/images/forgiveness1_l.jpeg"  height="272" />
+                        <div class="forgiveness1 img_desc font-gotham hide"><span class="design_title">Forgiveness</span><br /><br /><br />Show in: Raisin and Navy<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="forgiveness2 large_image hide" src="images/designs/images/forgiveness2_l.jpeg"  height="272" />
+                        <div class="forgiveness2 img_desc font-gotham hide"><span class="design_title">Forgiveness</span><br /><br /><br />Show in: Raisin and Ivory<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="forgiveness3 large_image hide" src="images/designs/images/forgiveness3_l.jpeg"  height="272" />
+                        <div class="forgiveness3 img_desc font-gotham hide"><span class="design_title">Forgiveness</span><br /><br /><br />Show in: Indigo<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="forgiveness4 large_image hide" src="images/designs/images/forgiveness4_l.jpeg"  height="272" />
+                        <div class="forgiveness4 img_desc font-gotham hide"><span class="design_title">Forgiveness</span><br /><br /><br />Show in: Venitian Red<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="hope1 large_image hide" src="images/designs/images/hope1_l.jpeg"  height="272" />
+                        <div class="hope1 img_desc font-gotham hide"><span class="design_title">Hope</span><br /><br /><br />Show in: Red and Navy<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="hope2 large_image hide" src="images/designs/images/hope2_l.jpeg"  height="272" />
+                        <div class="hope2 img_desc font-gotham hide"><span class="design_title">Hope</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="hope3 large_image hide" src="images/designs/images/hope3_l.jpeg"  height="272" />
+                        <div class="hope3 img_desc font-gotham hide"><span class="design_title">Hope</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="hope4 large_image hide" src="images/designs/images/hope4_l.jpeg"  height="272" />
+                        <div class="hope4 img_desc font-gotham hide"><span class="design_title">Hope</span><br /><br /><br />Show in: Red and Robin Blue<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="hope5 large_image hide" src="images/designs/images/hope5_l.jpeg"  height="272" />
+                        <div class="hope5 img_desc font-gotham hide"><span class="design_title">Hope</span><br /><br /><br />Show in: Marine Blue<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="inspiration1 large_image hide" src="images/designs/images/inspiration1_l.jpeg"  height="272" />
+                        <div class="inspiration1 img_desc font-gotham hide"><span class="design_title">Inspiration</span><br /><br /><br />Show in: Grey<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="inspiration2 large_image hide" src="images/designs/images/inspiration2_l.jpeg"  height="272" />
+                        <div class="inspiration2 img_desc font-gotham hide"><span class="design_title">Inspiration</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="knowledge1 large_image hide" src="images/designs/images/knowledge1_l.jpeg"  height="272" />
+                        <div class="knowledge1 img_desc font-gotham hide"><span class="design_title">Knowldge</span><br /><br /><br />Show in: Venitian Red and Navy<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="knowledge2 large_image hide" src="images/designs/images/knowledge2_l.jpeg"  height="272" />
+                        <div class="knowledge2 img_desc font-gotham hide"><span class="design_title">Knowldge</span><br /><br /><br />Show in: Venitian Red and Marine Blue<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="knowledge3 large_image hide" src="images/designs/images/knowledge3_l.jpeg"  height="272" />
+                        <div class="knowledge3 img_desc font-gotham hide"><span class="design_title">Knowldge</span><br /><br /><br />Show in: Indigo<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="legacy1 large_image hide" src="images/designs/images/legacy1_l.jpeg"  height="272" />
+                        <div class="legacy1 img_desc font-gotham hide"><span class="design_title">Legacy</span><br /><br /><br />Show in: Sand<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="legacy2 large_image hide" src="images/designs/images/legacy2_l.jpeg"  height="272" />
+                        <div class="legacy2 img_desc font-gotham hide"><span class="design_title">Legacy</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="legacy3 large_image hide" src="images/designs/images/legacy3_l.jpeg"  height="272" />
+                        <div class="legacy3 img_desc font-gotham hide"><span class="design_title">Legacy</span><br /><br /><br />Show in: Ivory<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="legacy4 large_image hide" src="images/designs/images/legacy4_l.jpeg"  height="272" />
+                        <div class="legacy4 img_desc font-gotham hide"><span class="design_title">Legacy</span><br /><br /><br />Show in: Blue-Green<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="legacy5 large_image hide" src="images/designs/images/legacy5_l.jpeg"  height="272" />
+                        <div class="legacy5 img_desc font-gotham hide"><span class="design_title">Legacy</span><br /><br /><br />Show in: Venitian Red<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="majestic1 large_image hide" src="images/designs/images/majestic1_l.jpeg"  height="272" />
+                        <div class="majestic1 img_desc font-gotham hide"><span class="design_title">Majestic</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="majestic2 large_image hide" src="images/designs/images/majestic2_l.jpeg"  height="272" />
+                        <div class="majestic2 img_desc font-gotham hide"><span class="design_title">Majestic</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="precision large_image hide" src="images/designs/images/precision_l.jpeg"  height="272" />
+                        <div class="precision img_desc font-gotham hide"><span class="design_title">Precision</span><br /><br /><br />Show in: 3'11" X 6'<br /><br />Knots per square inch:  <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="prevail large_image hide" src="images/designs/images/prevail_l.jpeg"  height="272" />
+                        <div class="prevail img_desc font-gotham hide"><span class="design_title">Prevail</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="revelation large_image hide" src="images/designs/images/revelation_l.jpeg"  height="272" />
+                        <div class="revelation img_desc font-gotham hide"><span class="design_title">Revelation</span><br /><br /><br />Show in: Cranberry<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="splendor1 large_image hide" src="images/designs/images/splendor1_l.jpeg"  height="272" />
+                        <div class="splendor1 img_desc font-gotham hide"><span class="design_title">Splendor</span><br /><br /><br />Show in: Red<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <img class="splendor2 large_image hide" src="images/designs/images/splendor2_l.jpeg"  height="272" />
+                        <div class="splendor2 img_desc font-gotham hide"><span class="design_title">Splendor</span><br /><br /><br />Show in: Indigo<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+
+                        <img class="talent large_image hide" src="images/designs/images/talent_l.jpeg"  height="272" />
+                        <div class="talent img_desc font-gotham hide"><span class="design_title">Talent</span><br /><br /><br />Show in: Black<br /><br />Knots per square inch: 120 <br /><br /><span style="font-style:italic;">Interested in this design? Contact us for in stock options and pricing.<br /><br />Customization is also available.</i></div>
+                        <!-- tribal end -->
+                    </div>
+                    <div class="clear"></div>
+                    <div class="thumbs">
+                        <div class="masters_thumbs">
+                            <a href="#" class="abrahamic_tribal hide" onclick="show_image('abrahamic_tribal');"><img src="images/designs/images/tribal_patterning_s.jpeg" height="73" /></a>
+                            <a href="#" class="abrahamic_tribal2 hide" onclick="show_image('abrahamic_tribal2');"><img src="images/designs/images/tribal_patterning2_s.jpeg" height="73" /></a>
+                            <a href="#" class="arabesque1 hide" onclick="show_image('arabesque1');"><img src="images/designs/images/arabesque1_s.jpeg" height="73" /></a>
+                            <a href="#" class="arabesque2 hide" onclick="show_image('arabesque2');"><img src="images/designs/images/arabesque2_s.jpeg" height="73" /></a>
+                            <a href="#" class="puzzle hide" onclick="show_image('puzzle');"><img src="images/designs/images/puzzle_s.jpeg" height="73" /></a>
+                            <a href="#" class="simeon hide" onclick="show_image('simeon');"><img src="images/designs/images/simeon_s.jpeg" height="73" /></a>
+                            <a href="#" class="simeon2 hide" onclick="show_image('simeon2');"><img src="images/designs/images/simeon2_s.jpeg" height="73" /></a>
+                            <a href="#" class="volute hide" onclick="show_image('volute');"><img src="images/designs/images/volute_s.jpeg" height="73" /></a>
+                            <a href="#" class="zh1 hide" onclick="show_image('zh1');"><img src="images/designs/images/zh1_s.jpeg" height="73" /></a>
+                            <a href="#" class="zh1 hide" onclick="show_image('zh2');"><img src="images/designs/images/zh2_s.jpeg" height="73" /></a>
+                        </div>
+                        <div class="modern_thumbs">
+                            <a href="#" class="confidence1 hide" onclick="show_image('confidence11');"><img src="images/designs/images/confidence11_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence1 hide" onclick="show_image('confidence12');"><img src="images/designs/images/confidence12_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence1 hide" onclick="show_image('confidence13');"><img src="images/designs/images/confidence13_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence1 hide" onclick="show_image('confidence14');"><img src="images/designs/images/confidence14_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence1 hide" onclick="show_image('confidence15');"><img src="images/designs/images/confidence15_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="confidence2 hide" onclick="show_image('confidence21');"><img src="images/designs/images/confidence21_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence2 hide" onclick="show_image('confidence22');"><img src="images/designs/images/confidence22_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence2 hide" onclick="show_image('confidence23');"><img src="images/designs/images/confidence23_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence2 hide" onclick="show_image('confidence24');"><img src="images/designs/images/confidence24_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence2 hide" onclick="show_image('confidence25');"><img src="images/designs/images/confidence25_s.jpeg" height="73" /></a>
+                            <a href="#" class="confidence2 hide" onclick="show_image('confidence26');"><img src="images/designs/images/confidence26_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="contentment hide" onclick="show_image('contentment');"><img src="images/designs/images/contentment_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="dawn hide" onclick="show_image('dawn1');"><img src="images/designs/images/dawn1_s.jpeg" height="73" /></a>
+                            <a href="#" class="dawn hide" onclick="show_image('dawn2');"><img src="images/designs/images/dawn2_s.jpeg" height="73" /></a>
+                            <a href="#" class="dawn hide" onclick="show_image('dawn3');"><img src="images/designs/images/dawn3_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="dreams hide" onclick="show_image('dreams1');"><img src="images/designs/images/dreams1_s.jpeg" height="73" /></a>
+                            <a href="#" class="dreams hide" onclick="show_image('dreams2');"><img src="images/designs/images/dreams2_s.jpeg" height="73" /></a>
+                            <a href="#" class="dreams hide" onclick="show_image('dreams3');"><img src="images/designs/images/dreams3_s.jpeg" height="73" /></a>
+                            <a href="#" class="dreams hide" onclick="show_image('dreams4');"><img src="images/designs/images/dreams4_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="elation hide" onclick="show_image('elation1');"><img src="images/designs/images/elation1_s.jpeg" height="73" /></a>
+                            <a href="#" class="elation hide" onclick="show_image('elation2');"><img src="images/designs/images/elation2_s.jpeg" height="73" /></a>
+                            <a href="#" class="elation hide" onclick="show_image('elation3');"><img src="images/designs/images/elation3_s.jpeg" height="73" /></a>
+                            <a href="#" class="elation hide" onclick="show_image('elation4');"><img src="images/designs/images/elation4_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="escape hide" onclick="show_image('escape');"><img src="images/designs/images/escape_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="fortification hide" onclick="show_image('fortification1');"><img src="images/designs/images/fortification1_s.jpeg" height="73" /></a>
+                            <a href="#" class="fortification hide" onclick="show_image('fortification2');"><img src="images/designs/images/fortification2_s.jpeg" height="73" /></a>
+                            <a href="#" class="fortification hide" onclick="show_image('fortification3');"><img src="images/designs/images/fortification3_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="future hide" onclick="show_image('future');"><img src="images/designs/images/future_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="glory hide" onclick="show_image('glory1');"><img src="images/designs/images/glory1_s.jpeg" height="73" /></a>
+                            <a href="#" class="glory hide" onclick="show_image('glory2');"><img src="images/designs/images/glory2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="intervined hide" onclick="show_image('intervined');"><img src="images/designs/images/intervined_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="luck hide" onclick="show_image('luck');"><img src="images/designs/images/luck_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="melody hide" onclick="show_image('melody');"><img src="images/designs/images/melody_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="merge hide" onclick="show_image('merge1');"><img src="images/designs/images/merge1_s.jpeg" height="73" /></a>
+                            <a href="#" class="merge hide" onclick="show_image('merge2');"><img src="images/designs/images/merge2_s.jpeg" height="73" /></a>
+                            <a href="#" class="merge hide" onclick="show_image('merge3');"><img src="images/designs/images/merge3_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="milestone hide" onclick="show_image('milestone1');"><img src="images/designs/images/milestone1_s.jpeg" height="73" /></a>
+                            <a href="#" class="milestone hide" onclick="show_image('milestone2');"><img src="images/designs/images/milestone2_s.jpeg" height="73" /></a>
+                            <a href="#" class="milestone hide" onclick="show_image('milestone3');"><img src="images/designs/images/milestone3_s.jpeg" height="73" /></a>
+                            <a href="#" class="milestone hide" onclick="show_image('milestone4');"><img src="images/designs/images/milestone4_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="paradise hide" onclick="show_image('paradise1');"><img src="images/designs/images/paradise1_s.jpeg" height="73" /></a>
+                            <a href="#" class="paradise hide" onclick="show_image('paradise2');"><img src="images/designs/images/paradise2_s.jpeg" height="73" /></a>
+                            <a href="#" class="paradise hide" onclick="show_image('paradise3');"><img src="images/designs/images/paradise3_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="parallel hide" onclick="show_image('parallel');"><img src="images/designs/images/parallel_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="precious hide" onclick="show_image('precious1');"><img src="images/designs/images/precious1_s.jpeg" height="73" /></a>
+                            <a href="#" class="precious hide" onclick="show_image('precious2');"><img src="images/designs/images/precious2_s.jpeg" height="73" /></a>
+                            <a href="#" class="precious hide" onclick="show_image('precious3');"><img src="images/designs/images/precious3_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="preciousb hide" onclick="show_image('preciousb');"><img src="images/designs/images/preciousb_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="radiance hide" onclick="show_image('radiance1');"><img src="images/designs/images/radiance1_s.jpeg" height="73" /></a>
+                            <a href="#" class="radiance hide" onclick="show_image('radiance2');"><img src="images/designs/images/radiance2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="gabbeh hide" onclick="show_image('gabbeh');"><img src="images/designs/images/gabbeh_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="regenerate hide" onclick="show_image('regenerate1');"><img src="images/designs/images/regenerate1_s.jpeg" height="73" /></a>
+                            <a href="#" class="regenerate hide" onclick="show_image('regenerate2');"><img src="images/designs/images/regenerate2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="reneval hide" onclick="show_image('reneval1');"><img src="images/designs/images/reneval1_s.jpeg" height="73" /></a>
+                            <a href="#" class="reneval hide" onclick="show_image('reneval2');"><img src="images/designs/images/reneval2_s.jpeg" height="73" /></a>
+                            <a href="#" class="reneval hide" onclick="show_image('reneval3');"><img src="images/designs/images/reneval3_s.jpeg" height="73" /></a>
+                            <a href="#" class="reneval hide" onclick="show_image('reneval4');"><img src="images/designs/images/reneval4_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="reneval2 hide" onclick="show_image('reneval21');"><img src="images/designs/images/reneval21_s.jpeg" height="73" /></a>
+                            <a href="#" class="reneval2 hide" onclick="show_image('reneval22');"><img src="images/designs/images/reneval22_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="resourcefulness hide" onclick="show_image('resourcefulness11');"><img src="images/designs/images/resourcefulness11_s.jpeg" height="73" /></a>
+                            <a href="#" class="resourcefulness hide" onclick="show_image('resourcefulness12');"><img src="images/designs/images/resourcefulness12_s.jpeg" height="73" /></a>
+                            <a href="#" class="resourcefulness hide" onclick="show_image('resourcefulness13');"><img src="images/designs/images/resourcefulness13_s.jpeg" height="73" /></a>
+                            <a href="#" class="resourcefulness hide" onclick="show_image('resourcefulness14');"><img src="images/designs/images/resourcefulness14_s.jpeg" height="73" /></a>
+                            <a href="#" class="resourcefulness hide" onclick="show_image('resourcefulness15');"><img src="images/designs/images/resourcefulness15_s.jpeg" height="73" /></a>
+                            <a href="#" class="resourcefulness hide" onclick="show_image('resourcefulness16');"><img src="images/designs/images/resourcefulness16_s.jpeg" height="73" /></a>
+                            
+                            <a href="#" class="resourcefulness2 hide" onclick="show_image('resourcefulness21');"><img src="images/designs/images/resourcefulness21_s.jpeg" height="73" /></a>
+                            <a href="#" class="resourcefulness2 hide" onclick="show_image('resourcefulness22');"><img src="images/designs/images/resourcefulness22_s.jpeg" height="73" /></a>
+                            <a href="#" class="resourcefulness2 hide" onclick="show_image('resourcefulness23');"><img src="images/designs/images/resourcefulness23_s.jpeg" height="73" /></a>
+                            <a href="#" class="resourcefulness2 hide" onclick="show_image('resourcefulness24');"><img src="images/designs/images/resourcefulness24_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="simplicity hide" onclick="show_image('simplicity1');"><img src="images/designs/images/simplicity1_s.jpeg" height="73" /></a>
+                            <a href="#" class="simplicity hide" onclick="show_image('simplicity2');"><img src="images/designs/images/simplicity2_s.jpeg" height="73" /></a>
+                            <a href="#" class="simplicity hide" onclick="show_image('simplicity3');"><img src="images/designs/images/simplicity3_s.jpeg" height="73" /></a>
+                            <a href="#" class="simplicity hide" onclick="show_image('simplicity4');"><img src="images/designs/images/simplicity4_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="call hide" onclick="show_image('call1');"><img src="images/designs/images/call1_s.jpeg" height="73" /></a>
+                            <a href="#" class="call hide" onclick="show_image('call2');"><img src="images/designs/images/call2_s.jpeg" height="73" /></a>
+                            
+                            <a href="#" class="wave hide" onclick="show_image('wave');"><img src="images/designs/images/wave_s.jpeg" height="73" /></a>
+                        </div>
+                        <div class="traditional_thumbs">
+                            <a href="#" class="ambition hide" onclick="show_image('ambition');"><img src="images/designs/images/ambition_s.jpeg" height="73" /></a>
+                            
+                            <a href="#" class="blossom hide" onclick="show_image('blossom1');"><img src="images/designs/images/blossom1_s.jpeg" height="73" /></a>
+                            <a href="#" class="blossom hide" onclick="show_image('blossom2');"><img src="images/designs/images/blossom2_s.jpeg" height="73" /></a>
+                            <a href="#" class="blossom hide" onclick="show_image('blossom3');"><img src="images/designs/images/blossom3_s.jpeg" height="73" /></a>
+                            <a href="#" class="blossom hide" onclick="show_image('blossom4');"><img src="images/designs/images/blossom4_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="charity hide" onclick="show_image('charity1');"><img src="images/designs/images/charity1_s.jpeg" height="73" /></a>
+                            <a href="#" class="charity hide" onclick="show_image('charity2');"><img src="images/designs/images/charity2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="compassion hide" onclick="show_image('compassion');"><img src="images/designs/images/compassion_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="convergence hide" onclick="show_image('convergence');"><img src="images/designs/images/convergence_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="creation hide" onclick="show_image('creation1');"><img src="images/designs/images/creation1_s.jpeg" height="73" /></a>
+                            <a href="#" class="creation hide" onclick="show_image('creation2');"><img src="images/designs/images/creation2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="harmony hide" onclick="show_image('harmony1');"><img src="images/designs/images/harmony1_s.jpeg" height="73" /></a>
+                            <a href="#" class="harmony hide" onclick="show_image('harmony2');"><img src="images/designs/images/harmony2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="kindness hide" onclick="show_image('kindness');"><img src="images/designs/images/kindness_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="loveliness hide" onclick="show_image('loveliness');"><img src="images/designs/images/loveliness_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="offerings hide" onclick="show_image('offerings');"><img src="images/designs/images/offerings_s.jpeg" height="73" /></a>
+                            <a href="#" class="offerings hide" onclick="show_image('offerings2');"><img src="images/designs/images/offerings2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="prosperity hide" onclick="show_image('prosperity');"><img src="images/designs/images/prosperity_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="embrace hide" onclick="show_image('embrace');"><img src="images/designs/images/embrace_s.jpeg" height="73" /></a>
+                            
+                            <a href="#" class="purity hide" onclick="show_image('purity1');"><img src="images/designs/images/purity1_s.jpeg" height="73" /></a>
+                            <a href="#" class="purity hide" onclick="show_image('purity2');"><img src="images/designs/images/purity2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="respect hide" onclick="show_image('respect');"><img src="images/designs/images/respect_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="significance hide" onclick="show_image('significance');"><img src="images/designs/images/significance_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="silence hide" onclick="show_image('silence1');"><img src="images/designs/images/silence1_s.jpeg" height="73" /></a>
+                            <a href="#" class="silence hide" onclick="show_image('silence2');"><img src="images/designs/images/silence2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="trance hide" onclick="show_image('trance');"><img src="images/designs/images/trance_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="treelife hide" onclick="show_image('treelife');"><img src="images/designs/images/treelife_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="trust hide" onclick="show_image('trust');"><img src="images/designs/images/trust_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="virtue hide" onclick="show_image('virtue');"><img src="images/designs/images/virtue_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="vision hide" onclick="show_image('vision');"><img src="images/designs/images/vision_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="vitality hide" onclick="show_image('vitality1');"><img src="images/designs/images/vitality1_s.jpeg" height="73" /></a>
+                            <a href="#" class="vitality hide" onclick="show_image('vitality2');"><img src="images/designs/images/vitality2_s.jpeg" height="73" /></a>
+                            <a href="#" class="vitality hide" onclick="show_image('vitality3');"><img src="images/designs/images/vitality3_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="wish hide" onclick="show_image('wish1');"><img src="images/designs/images/wish1_s.jpeg" height="73" /></a>
+                            <a href="#" class="wish hide" onclick="show_image('wish2');"><img src="images/designs/images/wish2_s.jpeg" height="73" /></a>
+                        </div>
+                        <div class="tribal_thumbs">
+                            <a href="#" class="balance hide" onclick="show_image('balance1');"><img src="images/designs/images/balance1_s.jpeg" height="73" /></a>
+                            <a href="#" class="balance hide" onclick="show_image('balance2');"><img src="images/designs/images/balance2_s.jpeg" height="73" /></a>
+                            <a href="#" class="balance hide" onclick="show_image('balance3');"><img src="images/designs/images/balance3_s.jpeg" height="73" /></a>
+                            <a href="#" class="balance hide" onclick="show_image('balance4');"><img src="images/designs/images/balance4_s.jpeg" height="73" /></a>
+                            <a href="#" class="balance hide" onclick="show_image('balance5');"><img src="images/designs/images/balance5_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="chains hide" onclick="show_image('chains1');"><img src="images/designs/images/chains1_s.jpeg" height="73" /></a>
+                            <a href="#" class="chains hide" onclick="show_image('chains2');"><img src="images/designs/images/chains2_s.jpeg" height="73" /></a>
+                            <a href="#" class="chains hide" onclick="show_image('chains3');"><img src="images/designs/images/chains3_s.jpeg" height="73" /></a>
+                            <a href="#" class="chains hide" onclick="show_image('chains4');"><img src="images/designs/images/chains4_s.jpeg" height="73" /></a>
+                        
+                            <a href="#" class="connection hide" onclick="show_image('connection1');"><img src="images/designs/images/connection1_s.jpeg" height="73" /></a>
+                            <a href="#" class="connection hide" onclick="show_image('connection2');"><img src="images/designs/images/connection2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="eternity hide" onclick="show_image('eternity');"><img src="images/designs/images/eternity_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="forgiveness hide" onclick="show_image('forgiveness1');"><img src="images/designs/images/forgiveness1_s.jpeg" height="73" /></a>
+                            <a href="#" class="forgiveness hide" onclick="show_image('forgiveness2');"><img src="images/designs/images/forgiveness2_s.jpeg" height="73" /></a>
+                            <a href="#" class="forgiveness hide" onclick="show_image('forgiveness3');"><img src="images/designs/images/forgiveness3_s.jpeg" height="73" /></a>
+                            <a href="#" class="forgiveness hide" onclick="show_image('forgiveness4');"><img src="images/designs/images/forgiveness4_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="hope hide" onclick="show_image('hope1');"><img src="images/designs/images/hope1_s.jpeg" height="73" /></a>
+                            <a href="#" class="hope hide" onclick="show_image('hope2');"><img src="images/designs/images/hope2_s.jpeg" height="73" /></a>
+                            <a href="#" class="hope hide" onclick="show_image('hope3');"><img src="images/designs/images/hope3_s.jpeg" height="73" /></a>
+                            <a href="#" class="hope hide" onclick="show_image('hope4');"><img src="images/designs/images/hope4_s.jpeg" height="73" /></a>
+                            <a href="#" class="hope hide" onclick="show_image('hope5');"><img src="images/designs/images/hope5_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="inspiration hide" onclick="show_image('inspiration1');"><img src="images/designs/images/inspiration1_s.jpeg" height="73" /></a>
+                            <a href="#" class="inspiration hide" onclick="show_image('inspiration2');"><img src="images/designs/images/inspiration2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="knowledge hide" onclick="show_image('knowledge1');"><img src="images/designs/images/knowledge1_s.jpeg" height="73" /></a>
+                            <a href="#" class="knowledge hide" onclick="show_image('knowledge2');"><img src="images/designs/images/knowledge2_s.jpeg" height="73" /></a>
+                            <a href="#" class="knowledge hide" onclick="show_image('knowledge3');"><img src="images/designs/images/knowledge3_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="legacy hide" onclick="show_image('legacy1');"><img src="images/designs/images/legacy1_s.jpeg" height="73" /></a>
+                            <a href="#" class="legacy hide" onclick="show_image('legacy2');"><img src="images/designs/images/legacy2_s.jpeg" height="73" /></a>
+                            <a href="#" class="legacy hide" onclick="show_image('legacy3');"><img src="images/designs/images/legacy3_s.jpeg" height="73" /></a>
+                            <a href="#" class="legacy hide" onclick="show_image('legacy4');"><img src="images/designs/images/legacy4_s.jpeg" height="73" /></a>
+                            <a href="#" class="legacy hide" onclick="show_image('legacy5');"><img src="images/designs/images/legacy5_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="majestic hide" onclick="show_image('majestic1');"><img src="images/designs/images/majestic1_s.jpeg" height="73" /></a>
+                            <a href="#" class="majestic hide" onclick="show_image('majestic2');"><img src="images/designs/images/majestic2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="precision hide" onclick="show_image('precision');"><img src="images/designs/images/precision_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="prevail hide" onclick="show_image('prevail');"><img src="images/designs/images/prevail_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="revelation hide" onclick="show_image('revelation');"><img src="images/designs/images/revelation_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="splendor hide" onclick="show_image('splendor1');"><img src="images/designs/images/splendor1_s.jpeg" height="73" /></a>
+                            <a href="#" class="splendor hide" onclick="show_image('splendor2');"><img src="images/designs/images/splendor2_s.jpeg" height="73" /></a>
+
+                            <a href="#" class="talent hide" onclick="show_image('talent');"><img src="images/designs/images/talent_s.jpeg" height="73" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fb_form_container">
+                <div class="fb_form_content">
+                    <span class="thank_you font-gotham">
+                        <span class="font-gotham-bold">Thank you for your interest!</span><br />
+                        Please provide your information<br /> below and an ARZU STUDIO <br />HOPE sales representative will <br />contact you
+                    </span>
+                    <div class="clear"></div>
+                    <form class="fb_form font-gotham" action="contact.php" method="post">
+                        <label for="name">Name*</label><br />
+                        <input name="name" type="text" style="width:215px;margin-bottom:3px;" /> <br />                          
+                        
+                        <label for="email">Email Address*</label>  <br />  
+                        <input name="email" type="text" style="width:215px;margin-bottom:3px;" /><br />
+                                              
+                        <label for="hear_about" style="margin-top:0px;">How did you hear about us?*</label><br />
+                        <select name="hear_about" style="width:219px;margin-bottom:3px;">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <div class="clear"></div>
+
+                        <label for="zip">Zip</label><br />
+                        <input type="text" name="zip" class="inp_zip" style="width:215px;margin-bottom:3px;"/><br />
+                        
+                        <div class="clear"></div>
+
+                        <label class="questions" for="questions">Questions / Comments</label><br />
+                        <textarea name="questions" rows="5" cols="10" style="width:215px;margin-bottom:3px;"></textarea><br />
+                        
+                        <div class="clear"></div>
+                        <input type="checkbox" name="subscribe" value="SUBSCRIBE" class="subscribe" /><span class="subscribe" >Subscribe to ASH emails & newsletters</span><br />
+                            
+                        <input type="submit" class="submit_inquiry font-gotham" value="SUBMIT INQUIRY" />
+                        <div class="clear"></div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <script>
+            $(document).ready(function () {
+                $("a#masters_link").fancybox({padding: 0});
+                $("a#modern_link").fancybox({ padding: 0});
+                $("a#traditional_link").fancybox({ padding: 0});
+                $("a#tribal_link").fancybox({ padding: 0 });
+            });
+            scroll = null;
+            function switch_category(cat_id) {
+                $('.hide').hide();
+                $(".togglable_cat").hide();
+                $("div." + cat_id).show();
+                $(".fb_cat li").removeClass("active_category");
+                $("#" + cat_id + "_cat").addClass("active_category");
+                selected_design = $("#" + cat_id + "_list li").first().attr("id");
+                console.log(selected_design);
+                $("." + selected_design).show();
+                $(".thumbs ." + cat_id + "_thumbs").first().show();
+                $(".thumbs ." + cat_id + "_thumbs a").first().click();
+                if (cat_id != 'masters') {
+
+                    setTimeout("scroll = $('.designs').jScrollPane().data().jsp;$('.designs').css('overflow', 'auto');", 100);
+                } else {
+
+                    setTimeout("if(scroll != null){scroll.destroy();}$('.designs').css('overflow', 'hidden');", 100);
+                    
+                    
+                }
+            }
+            function show_thumbs(thumbs_id) {
+                $(".hide").hide();
+                $("a." + thumbs_id).show();
+                $("a." + thumbs_id).first().click();
+            }
+            function show_image(img_id) {
+                $(".hide.img_desc, .hide.large_image").hide();
+                $('.' + img_id).show();
+            }
+        </script>
+    </body>
+</html>
